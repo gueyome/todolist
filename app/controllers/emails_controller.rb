@@ -27,6 +27,7 @@ class EmailsController < ApplicationController
 
   def update
     @email = Email.find(params[:id])
+    puts "***"*60
     puts params
     if params[:origin] == "object"
       puts "#"*60
