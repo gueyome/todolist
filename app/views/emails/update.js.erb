@@ -1,1 +1,9 @@
 document.getElementById("selection").innerHTML = "<%= j render 'show_email', email: @email %>" ;
+if (<%= @email.read %> === false) {
+  console.log("etat non lu");
+  document.getElementById("btn-read").textContent = "Marquer comme lu" ;
+} else {
+  console.log("etat lu");
+  document.getElementById("btn-read").textContent = "Marquer comme non lu" ;
+};
+

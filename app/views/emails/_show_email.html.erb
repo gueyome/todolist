@@ -2,6 +2,6 @@
 <h2><%= email.object %></h2>
 <p> <%= email.body %></p>
 <%= link_to "Supprimer", email_path(email.id), data: {confirm: "Es-tu sur?", method: "delete"}, class: "btn btn-danger", remote: true %>
-<%= link_to "Marquer comme lu", email_path(email.id, :origin => "btn"), method: "put", class: "btn btn-warning", remote: true %>
+<%= link_to "Marquer comme lu", email_path(email.id, :origin => "btn"), id: "btn-read", method: "put", class: "btn btn-warning", remote: true %>
 </p>
 </div>
