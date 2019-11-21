@@ -2,8 +2,10 @@ document.getElementById("selection").innerHTML = "<%= j render 'show_email', ema
 if (<%= @email.read %> === false) {
   console.log("etat non lu");
   document.getElementById("btn-read").textContent = "Marquer comme lu" ;
+  document.getElementById("email-<%= @email.id %>").style="font-weight: bold; background-color: #F9F3F5;"
 } else {
   console.log("etat lu");
   document.getElementById("btn-read").textContent = "Marquer comme non lu" ;
+  document.getElementById("email-<%= @email.id %>").style="none"
 };
 
