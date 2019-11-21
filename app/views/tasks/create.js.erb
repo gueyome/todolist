@@ -1,0 +1,4 @@
+alert("L'élément a bien été créé");
+document.getElementById("ul-<%=@task.category.id%>").insertAdjacentHTML("beforeend", "<li><%=@task.title%> <% unless @task.deadline.nil? %> , to read: <%=@task.deadline.strftime('%D')%> <% end %> </li>");
+document.getElementById("ul-<%=@task.category.id%>").lastChild.style.display = "none";
+$('#ul-<%=@task.category.id%> :last-child').fadeIn("slow");
