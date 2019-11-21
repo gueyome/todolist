@@ -15,4 +15,15 @@ class EmailsController < ApplicationController
     end
   end
 
+  def show
+    @email = Email.find(params[:id])
+    respond_to do |format|
+      format.html { redirect_to email_path }
+      format.js {
+        puts "******OK JS****"
+       }
+    end
+  end
+
+
 end
