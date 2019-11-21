@@ -15,5 +15,6 @@ require 'faker'
                       image: Faker::Avatar.image)
     my_task.category = my_category
     my_task.save
+  my_email = Email.create(object: Faker::Coffee.blend_name, body: Faker::ChuckNorris.fact)
   end
 end

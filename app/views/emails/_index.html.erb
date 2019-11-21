@@ -1,0 +1,23 @@
+<div class="container">
+  <div style='margin-bottom: 30px' class='text-center'>
+    <%= button_to "Recevoir un email", emails_path, :method => "post", class: "btn btn-primary mb-3 mt-3 text-center", remote: true %>
+  </div>
+  <table class="table"> 
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Liste des emails</th>
+        <th scope="col">Email sélectionné</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @emails.each do |email| %>
+      <tr>
+        <th scope="row"><%=email.id%></th>
+        <td><%=email.object%></td>
+        <td><%=email.body%></td>
+      </tr>
+      <%end %>
+    </tbody>
+  </table>
+</div>

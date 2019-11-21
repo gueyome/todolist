@@ -7,3 +7,5 @@
 2019-11-20 12:39:22.749 CET [1332] LOG:  invalid record length at 0/1A5F2A0: wanted 24, got 0
 2019-11-20 12:39:22.749 CET [1332] LOG:  redo done at 0/1A5F268
 2019-11-20 12:39:22.762 CET [1331] LOG:  database system is ready to accept connections
+2019-11-21 11:45:44.979 CET [12013] FATAL:  lock file "postmaster.pid" already exists
+2019-11-21 11:45:44.979 CET [12013] HINT:  Is another postmaster (PID 1331) running in data directory "/usr/local/var/postgres/THP"?
