@@ -1,4 +1,5 @@
-<tr id="email-<%=email.id%>">
+<tr id="email-<%=email.id%>" style="font-weight: bold; background-color: #F9F3F5;">
   <th scope="row"><%=email.id%></th>
-  <td class="font-weight-bold"><%= link_to "#{email.object}", email_path(email.id), remote: true %></td>
+  <td class="font-weight-bold"><%= link_to "#{email.object}", email_path(email.id, :origin => "object"), :method => "put", remote: true %></td>
 </tr>
+
