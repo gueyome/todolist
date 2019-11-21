@@ -1,4 +1,4 @@
-<tr>
+<tr id="email-<%=email.id%>">
   <th scope="row"><%=email.id%></th>
-  <td><%= link_to "#{email.object}", email_path(email.id), remote: true %></td>
+  <td class="font-weight-bold"><%= link_to "#{email.object}", email_path(email.id), remote: true %></td>
 </tr>

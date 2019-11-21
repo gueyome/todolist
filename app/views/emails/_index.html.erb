@@ -16,7 +16,7 @@
       <% @emails.each do |email| %>
       <tr id="email-<%=email.id%>">
         <th scope="row"><%=email.id%></th>
-        <td class="font-weight-bold"><%= link_to "#{email.object}", email_path(email.id), remote: true %></td>
+        <td class="font-weight-bold"><%= link_to "#{email.object}", email_path(email.id), {:origin => "object"}, remote: true, method: :put %></td>
       <%end %>
       </tr>
     </tbody>
